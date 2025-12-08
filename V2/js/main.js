@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousel();
     initCarCarousel();
     initGalleryCarousel();
+    initTeamCarousel();
     initContactForm();
     initScrollTop();
     initAOS();
@@ -660,6 +661,133 @@ function initGalleryCarousel() {
         if (e.key === 'ArrowLeft') prevSlide();
         if (e.key === 'ArrowRight') nextSlide();
     });
+
+    // Touch support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            nextSlide();
+        }
+        if (touchEndX > touchStartX + 50) {
+            prevSlide();
+        }
+    }
+}
+
+// ==========================================
+// TEAM CAROUSEL
+// ==========================================
+function initTeamCarousel() {
+    const track = document.querySelector('.team-carousel-track');
+    const slides = Array.from(document.querySelectorAll('.team-slide'));
+    const prevBtn = document.querySelector('.team-prev');
+    const nextBtn = document.querySelector('.team-next');
+    const indicatorsContainer = document.querySelector('.team-carousel-indicators');
+
+    if (!track || slides.length === 0) return;
+
+    let currentIndex = 0;
+    let slidesToShow = window.innerWidth >= 768 ? 3 : 1;
+    const slideCount = slides.length;
+
+    // Create indicators
+    const totalIndicators = Math.ceil(slideCount / slidesToShow);
+    for (let i = 0; i < totalIndicators; i++) {
+        const indicator = document.createElement('div');
+        indicator.classList.add('team-indicator');
+        if (i === 0) indicator.classList.add('active');
+        indicator.addEventListener('click', () => goToTeamSlide(i));
+        indicatorsContainer.appendChild(indicator);
+    }
+
+    const indicators = Array.from(document.querySelectorAll('.team-indicator'));
+
+    function updateCarousel() {
+        const percentage = (100 / slidesToShow) * currentIndex;
+        track.style.transform = `translateX(-${percentage}%)`;
+
+        // Update indicators
+        const activeIndicator = Math.floor(currentIndex / slidesToShow);
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === activeIndicator);
+        });
+    }
+
+    function goToTeamSlide(index) {
+        currentIndex = index * slidesToShow;
+        if (currentIndex >= slideCount) {
+            currentIndex = slideCount - slidesToShow;
+        }
+        updateCarousel();
+    }
+
+    function nextSlide() {
+        currentIndex += slidesToShow;
+        if (currentIndex >= slideCount) {
+            currentIndex = 0;
+        }
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex -= slidesToShow;
+        if (currentIndex < 0) {
+            currentIndex = Math.floor((slideCount - 1) / slidesToShow) * slidesToShow;
+        }
+        updateCarousel();
+    }
+
+    // Event listeners
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+    // Handle resize
+    window.addEventListener('resize', () => {
+        const newSlidesToShow = window.innerWidth >= 768 ? 3 : 1;
+        if (newSlidesToShow !== slidesToShow) {
+            slidesToShow = newSlidesToShow;
+            currentIndex = 0;
+
+            // Recreate indicators
+            indicatorsContainer.innerHTML = '';
+            const totalIndicators = Math.ceil(slideCount / slidesToShow);
+            for (let i = 0; i < totalIndicators; i++) {
+                const indicator = document.createElement('div');
+                indicator.classList.add('team-indicator');
+                if (i === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => goToTeamSlide(i));
+                indicatorsContainer.appendChild(indicator);
+            }
+
+            updateCarousel();
+        }
+    });
+
+    // Auto-play
+    let autoplayInterval = setInterval(nextSlide, 5000);
+
+    // Pause on hover
+    const carouselWrapper = document.querySelector('.team-carousel-wrapper');
+    if (carouselWrapper) {
+        carouselWrapper.addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+
+        carouselWrapper.addEventListener('mouseleave', () => {
+            autoplayInterval = setInterval(nextSlide, 5000);
+        });
+    }
 
     // Touch support for mobile
     let touchStartX = 0;
