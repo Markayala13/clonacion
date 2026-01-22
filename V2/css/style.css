@@ -180,6 +180,14 @@ button {
     animation: pulse 1.5s ease-in-out infinite;
 }
 
+.loading-logo {
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto;
+    animation: pulse 1.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(227, 24, 55, 0.5));
+}
+
 .loading-text {
     font-size: 24px;
     color: var(--text-gray);
@@ -934,6 +942,179 @@ section {
 }
 
 /* ==========================================
+   DRIVERS SECTION
+   ========================================== */
+.drivers-section {
+    background: var(--dark-bg);
+    padding: var(--spacing-xl) 0;
+}
+
+/* Driver Timeline Card */
+.driver-timeline-card {
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.driver-timeline-card .driver-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.driver-timeline-card .driver-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.driver-info {
+    padding: 20px;
+}
+
+.driver-name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 8px;
+}
+
+.driver-location {
+    color: var(--primary-red);
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.driver-location i {
+    margin-right: 5px;
+}
+
+.driver-age {
+    color: var(--text-gray);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.driver-bio {
+    color: var(--text-gray);
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.driver-expanded {
+    display: none;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 15px;
+}
+
+.driver-expanded.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.driver-full-bio {
+    color: var(--text-gray);
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.driver-achievements {
+    background: rgba(227, 24, 55, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-red);
+}
+
+.driver-achievements h4 {
+    font-family: var(--font-display);
+    font-size: 12px;
+    color: var(--primary-red);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.driver-achievements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.driver-achievements li {
+    color: var(--text-gray);
+    font-size: 11px;
+    padding: 4px 0;
+    padding-left: 18px;
+    position: relative;
+}
+
+.driver-achievements li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--primary-red);
+    font-size: 10px;
+}
+
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--primary-red);
+    border: 1px solid var(--primary-red);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.read-more-btn:hover {
+    background: var(--primary-red);
+    color: white;
+}
+
+.read-more-btn i {
+    transition: transform 0.3s ease;
+    font-size: 10px;
+}
+
+.read-more-btn.active i {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .drivers-grid {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .driver-card {
+        max-width: 100%;
+    }
+
+    .driver-info {
+        padding: 15px;
+    }
+
+    .driver-name {
+        font-size: 16px;
+    }
+}
+
+/* ==========================================
    TIMELINE SECTION
    ========================================== */
 .timeline-section {
@@ -1215,6 +1396,30 @@ section {
     transform: scale(1.05);
 }
 
+.team-member-info {
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.team-member-name {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-member-role {
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    color: var(--primary-red);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .team-slide-overlay {
     position: absolute;
     bottom: 15px;
@@ -1369,9 +1574,27 @@ section {
 }
 
 .contact-social a:hover {
-    background: var(--primary-red);
-    color: white;
     transform: scale(1.1);
+}
+
+.social-facebook {
+    background: rgba(24, 119, 242, 0.1) !important;
+    color: #1877F2 !important;
+}
+
+.social-facebook:hover {
+    background: #1877F2 !important;
+    color: white !important;
+}
+
+.social-instagram {
+    background: rgba(253, 204, 99, 0.1) !important;
+    color: #FDCC63 !important;
+}
+
+.social-instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+    color: white !important;
 }
 
 .contact-form {

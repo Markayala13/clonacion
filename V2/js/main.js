@@ -875,20 +875,20 @@ function initTeamCarousel() {
         }
     });
 
-    // Auto-play
-    let autoplayInterval = setInterval(nextSlide, 5000);
+    // Auto-play disabled
+    // let autoplayInterval = setInterval(nextSlide, 5000);
 
-    // Pause on hover
-    const carouselWrapper = document.querySelector('.team-carousel-wrapper');
-    if (carouselWrapper) {
-        carouselWrapper.addEventListener('mouseenter', () => {
-            clearInterval(autoplayInterval);
-        });
+    // Pause on hover - disabled
+    // const carouselWrapper = document.querySelector('.team-carousel-wrapper');
+    // if (carouselWrapper) {
+    //     carouselWrapper.addEventListener('mouseenter', () => {
+    //         clearInterval(autoplayInterval);
+    //     });
 
-        carouselWrapper.addEventListener('mouseleave', () => {
-            autoplayInterval = setInterval(nextSlide, 5000);
-        });
-    }
+    //     carouselWrapper.addEventListener('mouseleave', () => {
+    //         autoplayInterval = setInterval(nextSlide, 5000);
+    //     });
+    // }
 
     // Touch support for mobile
     let touchStartX = 0;
@@ -927,3 +927,21 @@ window.addEventListener('scroll', () => {
 
 console.log('%c🏁 MICHAEL MAPLES RACING #99 🏁', 'color: #E31837; font-size: 20px; font-weight: bold;');
 console.log('%cMaples Motorsports - Built for Speed', 'color: #0066CC; font-size: 14px;');
+
+// ==========================================
+// DRIVER CARDS - READ MORE/LESS TOGGLE
+// ==========================================
+function toggleDriverInfo(expandedId, button) {
+    const expanded = document.getElementById(expandedId);
+    const buttonText = button.querySelector('span');
+
+    if (expanded.classList.contains('show')) {
+        expanded.classList.remove('show');
+        buttonText.textContent = 'Read More';
+        button.classList.remove('active');
+    } else {
+        expanded.classList.add('show');
+        buttonText.textContent = 'Read Less';
+        button.classList.add('active');
+    }
+}
