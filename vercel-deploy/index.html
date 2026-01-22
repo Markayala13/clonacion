@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michael Maples - NASCAR ARCA Series Driver #99 | Maples Motorsports Official Website">
+    <title>Michael Maples Racing | NASCAR ARCA Series Driver #99</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="langBtn" class="lang-btn" aria-label="Switch Language">
+            <div class="flag-container">
+                <div class="flag-item active" data-lang="en">
+                    <img src="img/us.png" alt="US Flag" class="flag-icon">
+                    <span class="flag-label">EN</span>
+                </div>
+                <div class="flag-item" data-lang="es">
+                    <img src="img/sp.png" alt="SP Flag" class="flag-icon">
+                    <span class="flag-label">SP</span>
+                </div>
+            </div>
+        </button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <img src="images/logomms.png" alt="MMS Logo" class="loading-logo">
+            <div class="loading-text" data-en="Loading..." data-es="Cargando...">Loading...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="img/logo/bglogo.png" alt="Maples Motorsports Logo" class="nav-logo-img">
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="#about" class="nav-link" data-en="About" data-es="Acerca">About</a>
+                <a href="#stats" class="nav-link" data-en="Stats" data-es="Estadísticas">Stats</a>
+                <a href="#gallery" class="nav-link" data-en="Gallery" data-es="Galería">Gallery</a>
+                <a href="#team" class="nav-link" data-en="Team" data-es="Equipo">Team</a>
+                <a href="#schedule" class="nav-link" data-en="Schedule" data-es="Calendario">Schedule</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+                <div class="language-switcher-mobile">
+                    <button id="langBtnMobile" class="lang-btn" aria-label="Switch Language">
+                        <div class="flag-container">
+                            <div class="flag-item active" data-lang="en">
+                                <img src="img/us.png" alt="US Flag" class="flag-icon">
+                                <span class="flag-label">EN</span>
+                            </div>
+                            <div class="flag-item" data-lang="es">
+                                <img src="img/sp.png" alt="SP Flag" class="flag-icon">
+                                <span class="flag-label">SP</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="images/video/hero.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <!-- Particle System -->
+        <canvas id="particles"></canvas>
+        
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                <span data-en="MAPLES MOTORSPORTS" data-es="MAPLES MOTORSPORTS">MAPLES MOTORSPORTS</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400" data-en="CHAMPIONSHIP PERFORMANCE | RACING EXCELLENCE" data-es="RENDIMIENTO DE CAMPEONATO | EXCELENCIA EN CARRERAS">
+                CHAMPIONSHIP PERFORMANCE | RACING EXCELLENCE
+            </p>
+            <div class="hero-stats-mini" data-aos="fade-up" data-aos-delay="600">
+                <div class="stat-mini">
+                    <span class="stat-value">5</span>
+                    <span class="stat-label" data-en="DRIVERS" data-es="PILOTOS">DRIVERS</span>
+                </div>
+                <div class="stat-mini">
+                    <span class="stat-value">2019</span>
+                    <span class="stat-label" data-en="FOUNDED" data-es="FUNDADO">FOUNDED</span>
+                </div>
+                <div class="stat-mini">
+                    <span class="stat-value">20</span>
+                    <span class="stat-label" data-en="RACES" data-es="CARRERAS">RACES</span>
+                </div>
+            </div>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+                <a href="#contact" class="cta-btn primary" data-en="Contact Team" data-es="Contactar Equipo">Contact Team</a>
+                <a href="#about" class="cta-btn secondary" data-en="Learn More" data-es="Conocer Más">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="ABOUT MAPLES MOTORSPORTS" data-es="ACERCA DE MAPLES MOTORSPORTS">ABOUT MAPLES MOTORSPORTS</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3 data-en="Our Story" data-es="Nuestra Historia">Our Story</h3>
+                    <p data-en="Founded in 2019 by veteran racer and entrepreneur Michael Maples, Maples Motorsports represents the culmination of decades of racing passion, military discipline, and business excellence. Based in Oklahoma, our team combines championship-level talent with cutting-edge technology and an unwavering commitment to excellence." data-es="Fundado en 2019 por el veterano corredor y empresario Michael Maples, Maples Motorsports representa la culminación de décadas de pasión por las carreras, disciplina militar y excelencia empresarial. Con sede en Oklahoma, nuestro equipo combina talento de nivel de campeonato con tecnología de vanguardia y un compromiso inquebrantable con la excelencia.">
+                        Founded in 2019 by veteran racer and entrepreneur Michael Maples, Maples Motorsports represents the culmination of decades of racing passion, military discipline, and business excellence. Based in Oklahoma, our team combines championship-level talent with cutting-edge technology and an unwavering commitment to excellence.
+                    </p>
+                    <p data-en="As a full-time competitor in the NASCAR ARCA Menards Series, Maples Motorsports is building a legacy of performance, integrity, and innovation. Our diverse roster of talented drivers brings together experience, youth, and determination, creating a dynamic team capable of competing at the highest levels of stock car racing." data-es="Como competidor de tiempo completo en la Serie NASCAR ARCA Menards, Maples Motorsports está construyendo un legado de rendimiento, integridad e innovación. Nuestra diversa lista de pilotos talentosos reúne experiencia, juventud y determinación, creando un equipo dinámico capaz de competir en los más altos niveles de las carreras de stock car.">
+                        As a full-time competitor in the NASCAR ARCA Menards Series, Maples Motorsports is building a legacy of performance, integrity, and innovation. Our diverse roster of talented drivers brings together experience, youth, and determination, creating a dynamic team capable of competing at the highest levels of stock car racing.
+                    </p>
+                    <p data-en="From our state-of-the-art facilities to our experienced crew chiefs and mechanics, every aspect of Maples Motorsports is designed for one purpose: winning. We're not just racing – we're building a championship organization that will compete at NASCAR's highest levels for years to come." data-es="Desde nuestras instalaciones de última generación hasta nuestros experimentados jefes de equipo y mecánicos, cada aspecto de Maples Motorsports está diseñado para un solo propósito: ganar. No solo estamos corriendo, estamos construyendo una organización de campeonato que competirá en los más altos niveles de NASCAR en los años venideros.">
+                        From our state-of-the-art facilities to our experienced crew chiefs and mechanics, every aspect of Maples Motorsports is designed for one purpose: winning. We're not just racing – we're building a championship organization that will compete at NASCAR's highest levels for years to come.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-flag-checkered"></i>
+                            <span data-en="Commitment to performance, innovation, and continuous improvement" data-es="Compromiso con el rendimiento, la innovación y la mejora continua">Commitment to performance, innovation, and continuous improvement</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-trophy"></i>
+                            <span data-en="Every decision, every strategy, every race – focused on winning championships" data-es="Cada decisión, cada estrategia, cada carrera – enfocados en ganar campeonatos">Every decision, every strategy, every race – focused on winning championships</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <span data-en="World-class drivers, experienced crew, cutting-edge technology" data-es="Pilotos de clase mundial, equipo experimentado, tecnología de vanguardia">World-class drivers, experienced crew, cutting-edge technology</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-frame">
+                        <img src="images/gallery/herocar.jpeg" alt="Maples Motorsports">
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="BY THE NUMBERS" data-es="EN NÚMEROS">BY THE NUMBERS</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label" data-en="DRIVERS" data-es="PILOTOS">DRIVERS</div>
+                </div>
+
+                <div class="stat-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number" data-target="2019">0</div>
+                    <div class="stat-label" data-en="FOUNDED" data-es="FUNDADO">FOUNDED</div>
+                </div>
+
+                <div class="stat-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <div class="stat-number" data-target="20">0</div>
+                    <div class="stat-label" data-en="RACES" data-es="CARRERAS">RACES</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Car Gallery Section -->
+    <section id="car-gallery" class="car-gallery-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="OUR CARS" data-es="NUESTROS CARROS">OUR CARS</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="car-carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="car-carousel">
+                    <button class="car-carousel-btn car-prev" aria-label="Previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="car-carousel-container">
+                        <div class="car-carousel-track">
+                            <div class="car-slide">
+                                <img src="img/car/v2/99.png" alt="Maples Motorsports Car" loading="lazy">
+                            </div>
+
+                            <div class="car-slide">
+                                <img src="img/car/v2/91.png" alt="Maples Motorsports Car" loading="lazy">
+                            </div>
+
+                            <div class="car-slide">
+                                <img src="img/car/v2/91.2.png" alt="Maples Motorsports Car" loading="lazy">
+                            </div>
+
+                            <div class="car-slide">
+                                <img src="img/car/v2/91.3.png" alt="Maples Motorsports Car" loading="lazy">
+                            </div>
+
+                            <div class="car-slide">
+                                <img src="img/car/v2/1.2v.png" alt="Maples Motorsports Car" loading="lazy">
+                            </div>
+
+                            <div class="car-slide">
+                                <img src="img/car/v2/1.3v.png" alt="Maples Motorsports Car" loading="lazy">
+                            </div>
+
+                            <div class="car-slide">
+                                <img src="img/car/v2/RenderedImage.jpeg" alt="Maples Motorsports Car" loading="lazy">
+                            </div>
+
+                            <div class="car-slide">
+                                <img src="img/car/v2/RenderedImage (2).jpeg" alt="Maples Motorsports Car" loading="lazy">
+                            </div>
+
+                            <div class="car-slide">
+                                <img src="img/car/v2/RenderedImage (3).jpeg" alt="Maples Motorsports Car" loading="lazy">
+                            </div>
+
+                            <div class="car-slide">
+                                <img src="img/car/v2/RenderedImage (5).jpeg" alt="Maples Motorsports Car" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="car-carousel-btn car-next" aria-label="Next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="car-carousel-indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drivers Section -->
+    <section id="drivers" class="drivers-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="DRIVERS" data-es="PILOTOS">DRIVERS</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Michael Maples -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content driver-timeline-card">
+                        <div class="driver-image">
+                            <img src="img/team/teamv2/FLYERSS/MICHAEL FLYER.png" alt="Michael Maples">
+                        </div>
+                        <div class="driver-info">
+                            <h3 class="driver-name">MICHAEL MAPLES</h3>
+                            <p class="driver-location"><i class="fas fa-map-marker-alt"></i> Choctaw, Oklahoma</p>
+                            <p class="driver-age">62 years old</p>
+                            <p class="driver-bio">Team Owner & Driver #99. Army veteran and oil industry entrepreneur. 7th place ARCA 2025, 8th place 2024. Founded Maples Motorsports after 30+ years racing experience. From California asphalt to ARCA championship contender.</p>
+
+                            <div class="driver-expanded" id="michael-expanded">
+                                <p class="driver-full-bio">Michael Maples is a 62-year-old racing veteran from Choctaw, Oklahoma. His passion for motorsports began in 1993 with asphalt late model racing in California. After a 21-year hiatus to focus on family, he returned to racing in 2019 with IMCA modifieds. In 2024, Michael made his dream a reality by entering the ARCA Menards Series with Fast Track Racing, finishing 8th in points. For 2025, Michael formed Maples Motorsports as both driver and owner of the #99 Chevrolet, finishing 7th in the championship. An Army veteran and oil industry entrepreneur, Michael brings discipline, experience, and championship ambition to every race.</p>
+
+                                <div class="driver-achievements">
+                                    <h4>KEY ACHIEVEMENTS</h4>
+                                    <ul>
+                                        <li>2025: 7th Place ARCA Championship</li>
+                                        <li>2024: 8th Place ARCA Championship</li>
+                                        <li>Maples Motorsports Founder & Owner</li>
+                                        <li>U.S. Army Veteran</li>
+                                        <li>Oil Industry Entrepreneur</li>
+                                        <li>30+ Years Racing Experience</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="read-more-btn" onclick="toggleDriverInfo('michael-expanded', this)">
+                                <span>Read More</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content driver-timeline-card">
+                        <div class="driver-image">
+                            <img src="img/team/teamv2/FLYERSS/RYAN V2.PNG" alt="Ryan Vargas">
+                        </div>
+                        <div class="driver-info">
+                            <h3 class="driver-name">RYAN VARGAS</h3>
+                            <p class="driver-location"><i class="fas fa-map-marker-alt"></i> La Mirada, California</p>
+                            <p class="driver-age">25 years old</p>
+                            <p class="driver-bio">2x Wendell Scott Trailblazer Award winner and NASCAR Drive for Diversity graduate. International racing experience across Euro and Canada Series. Community champion and FACES board member inspiring young fans nationwide.</p>
+
+                            <div class="driver-expanded" id="ryan-expanded">
+                                <p class="driver-full-bio">La Mirada, California's Ryan Vargas is more than just another young racer with a dream of making it to the top of NASCAR's ladder. Ryan started racing at 11 years old in 2012 and proved to be a quick learner, winning dozens of races and championships in lower divisions.</p>
+                                <p class="driver-full-bio">Now at 25 years old, Vargas has become a known name in the sport of NASCAR. In 2018, Ryan was signed onto the NASCAR Drive for Diversity Program and competed in the NASCAR K&N Pro Series East for Rev Racing. In 2019, Vargas made the jump to the NASCAR O'Reilly Auto Parts Series and later the Craftsman Truck Series, garnering numerous top-20's and top-10's in his young NASCAR career.</p>
+                                <p class="driver-full-bio">Internationally, Vargas completed stints in the NASCAR Euro and NASCAR Canada Series, placing Top-10 in the standings in both series, securing overall Podiums and a Junior Class Victory in Germany (Sep. 2024).</p>
+                                <p class="driver-full-bio">Ryan's impressive 10-year racing career includes the 2016 and 2017 Wendell Scott Trailblazer Award which is the highest honors given to a minority (in Ryan's case, Hispanic) or female racer who competes in the NWAAS. Ryan is the first and only driver in NASCAR history to receive the prestigious award more than once.</p>
+                                <p class="driver-full-bio">Along with that, Vargas continues to use his diagnosis of Craniosynostosis (a skull deformation he had surgery for at 11 months old) to inspire young fans across the country to pursue their dreams no matter what.</p>
+                                <p class="driver-full-bio">In November of 2023, Ryan was named the 2023 Comcast Community Champion for his efforts as a board member of FACES: The National Craniofacial Association. As part of the award, FACES was given a donation of $60,000 to go towards grants for medical travel, events and the annual FACES Camp. In January 2024, Ryan was also recognized with the 2023 NMPA Q1 Pocono Spirit Award for his contributions with FACES.</p>
+
+                                <div class="driver-achievements">
+                                    <h4>KEY ACHIEVEMENTS</h4>
+                                    <ul>
+                                        <li>2x Wendell Scott Trailblazer Award Winner (2016, 2017)</li>
+                                        <li>First Hispanic Driver to Win Award Twice</li>
+                                        <li>2023 Comcast Community Champion</li>
+                                        <li>2023 NMPA Q1 Pocono Spirit Award</li>
+                                        <li>FACES Association Board Member</li>
+                                        <li>NASCAR Drive for Diversity Graduate</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="read-more-btn" onclick="toggleDriverInfo('ryan-expanded', this)">
+                                <span>Read More</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content driver-timeline-card">
+                        <div class="driver-image">
+                            <img src="img/team/teamv2/FLYERSS/MONTY FL.PNG" alt="Monty Tipton">
+                        </div>
+                        <div class="driver-info">
+                            <h3 class="driver-name">MONTY TIPTON</h3>
+                            <p class="driver-location"><i class="fas fa-map-marker-alt"></i> Mill Valley, California</p>
+                            <p class="driver-age">18 years old</p>
+                            <p class="driver-bio">Eagle Scout, SF Symphony tuba player, and ARCA West competitor. Triple threat: academics, music, and racing. The future of NASCAR - intelligent, well-rounded, and fiercely competitive. Bare Bones sponsored.</p>
+
+                            <div class="driver-expanded" id="monty-expanded">
+                                <p class="driver-full-bio">At just 18 years old, Mill Valley native Monty Tipton has his bases covered. This remarkable young man is an Eagle Scout, plays tuba for the San Francisco Symphony Youth Orchestra, and is a competitive ARCA driver. Monty's unique background demonstrates the discipline, dedication, and multitasking abilities that translate directly to success on the racetrack.</p>
+                                <p class="driver-full-bio">Competing part-time in the ARCA Menards Series West, Monty brings fresh talent and youthful energy to Maples Motorsports. His ability to balance academics, music, scouting, and professional racing at such a young age speaks volumes about his character and work ethic. Monty represents the future of NASCAR – intelligent, well-rounded, and fiercely competitive.</p>
+
+                                <div class="driver-achievements">
+                                    <h4>KEY ACHIEVEMENTS</h4>
+                                    <ul>
+                                        <li>Eagle Scout Rank Achievement</li>
+                                        <li>SF Symphony Youth Orchestra - Tuba</li>
+                                        <li>ARCA Menards Series West Competitor</li>
+                                        <li>Pro Late Model Experience</li>
+                                        <li>Bare Bones Sponsorship</li>
+                                        <li>Academic Excellence</li>
+                                        <li>Rising Young Talent</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="read-more-btn" onclick="toggleDriverInfo('monty-expanded', this)">
+                                <span>Read More</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content driver-timeline-card">
+                        <div class="driver-image">
+                            <img src="img/team/teamv2/FLYERSS/AUSTIN.png" alt="Austin Vaughn">
+                        </div>
+                        <div class="driver-info">
+                            <h3 class="driver-name">AUSTIN VAUGHN</h3>
+                            <p class="driver-location"><i class="fas fa-map-marker-alt"></i> Burnsville, Mississippi</p>
+                            <p class="driver-age">17 years old</p>
+                            <p class="driver-bio">2025 ARCA East Rookie of the Year & 4th Place Championship finisher. From go-karts at 9 to ARCA at 15. Mississippi's youngest licensed stock car racer with pit crew experience and championship potential.</p>
+
+                            <div class="driver-expanded" id="austin-expanded">
+                                <p class="driver-full-bio">Austin's hands-on experience in the pits has given him a deeper appreciation for the sport, helping him better understand what it takes to succeed at a professional level, both on and off the track.</p>
+                                <p class="driver-full-bio">In 2025, Austin completed a full ARCA Menards East season along with select starts in the ARCA Menards Main Series. He finished fourth in the overall East driver standings and earned the NASCAR ARCA Menards East Rookie of the Year title.</p>
+                                <p class="driver-full-bio">Looking ahead to 2026, Austin's focus is on building another strong East season while gaining more experience in the Main Series as he continues his climb to the highest levels of professional racing.</p>
+
+                                <div class="driver-achievements">
+                                    <h4>KEY ACHIEVEMENTS</h4>
+                                    <ul>
+                                        <li>2025 NASCAR ARCA Menards East ROOKIE OF THE YEAR</li>
+                                        <li>4th Place - 2025 ARCA Menards East Championship</li>
+                                        <li>2024 ARCA Series Debut at Du Quoin, Illinois</li>
+                                        <li>2024 ARCA Series Pit Crew Experience</li>
+                                        <li>Full 2025 ARCA East Season + Main Series Starts</li>
+                                        <li>Started Racing at Age 9 (Go-Karts)</li>
+                                        <li>Open Wheel Modified Experience (Age 11)</li>
+                                        <li>Youngest Licensed Stock Car Racer in Mississippi</li>
+                                        <li>Career: Go-Karts → Open Wheel → ARCA (Age 15)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="read-more-btn" onclick="toggleDriverInfo('austin-expanded', this)">
+                                <span>Read More</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content driver-timeline-card">
+                        <div class="driver-image">
+                            <img src="img/team/teamv2/FLYERSS/SHANE FLYER.png" alt="Shane Backes">
+                        </div>
+                        <div class="driver-info">
+                            <h3 class="driver-name">SHANE BACKES</h3>
+                            <p class="driver-location"><i class="fas fa-map-marker-alt"></i> Racing since 1987</p>
+                            <p class="driver-age">48 years old</p>
+                            <p class="driver-bio">U.S. Navy EOD veteran, Union Boilermaker, and commercial diver. 35+ years racing from IHRA drag racing to NASCAR dirt series. Boilermakers Union partnership. Blue-collar excellence meets championship determination.</p>
+
+                            <div class="driver-expanded" id="shane-expanded">
+                                <p class="driver-full-bio">Shane Backes is a seasoned ARCA driver with an incredible life story that extends far beyond the racetrack. A proud U.S. Navy veteran who served as an EOD (Explosive Ordnance Disposal) specialist, Shane brings the same precision, courage, and dedication to racing that he demonstrated in service to his country.</p>
+                                <p class="driver-full-bio">Currently a Union Boilermaker and commercial diver, Shane has been racing since he was 11 years old, competing in everything from IHRA Drag racing to NASCAR dirt series. His partnership with the Boilermakers Union showcases his commitment to working-class values and blue-collar excellence. Shane's decades of experience and unwavering work ethic make him a fierce competitor on any track.</p>
+
+                                <div class="driver-achievements">
+                                    <h4>KEY ACHIEVEMENTS</h4>
+                                    <ul>
+                                        <li>U.S. Navy EOD Veteran</li>
+                                        <li>Union Boilermaker Professional</li>
+                                        <li>Commercial Diver</li>
+                                        <li>ARCA Menards Series Competitor</li>
+                                        <li>Boilermakers Union Partnership</li>
+                                        <li>IHRA Drag Racing Experience</li>
+                                        <li>NASCAR Dirt Series Experience</li>
+                                        <li>35+ Years Racing Experience</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <button class="read-more-btn" onclick="toggleDriverInfo('shane-expanded', this)">
+                                <span>Read More</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tony Cosentino -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content driver-timeline-card">
+                        <div class="driver-image">
+                            <img src="img/team/teamv2/FLYERSS/TONYV2.PNG" alt="Tony Cosentino">
+                        </div>
+                        <div class="driver-info">
+                            <h3 class="driver-name">TONY CONSENTINO</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Matt Kemp -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content driver-timeline-card">
+                        <div class="driver-image">
+                            <img src="img/team/teamv2/FLYERSS/MATT KEMP.png" alt="Matt Kemp">
+                        </div>
+                        <div class="driver-info">
+                            <h3 class="driver-name">MATT KEMP</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="RACE GALLERY" data-es="GALERÍA DE CARRERAS">RACE GALLERY</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="gallery-carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="gallery-carousel">
+                    <button class="gallery-carousel-btn gallery-prev" aria-label="Previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="gallery-carousel-container">
+                        <div class="gallery-carousel-track">
+                            <div class="gallery-slide">
+                                <img src="img/New folder/1.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/2.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/3.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/4.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/6.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/7.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/8.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/10.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/11.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/12.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/13.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/14.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/15.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/16.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/17.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/18.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/19.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/20.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/21.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/22.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/23.PNG" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/gallery-2.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/gallery-3.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/gallery-4.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/gallery-5.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/gallery-6.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/gallery-7.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/gallery-8.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/gallery-9.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/gallery-10.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/gallery-14.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/post.png" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/herocar.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_0140.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_0915.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_0916.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_0918.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_0968.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_0973.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_1068.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_1069.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_1073.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_1074.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_1075.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_1077.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_1079.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_1080.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_1081.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/IMG_1082.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/WhatsApp Image 2025-12-05 at 9.25.06 PM.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/WhatsApp Image 2025-12-05 at 9.26.09 PM.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/WhatsApp Image 2025-12-05 at 9.27.31 PM.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/WhatsApp Image 2025-12-05 at 9.27.43 PM.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/WhatsApp Image 2025-12-05 at 9.28.00 PM.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/WhatsApp Image 2025-12-05 at 9.28.14 PM.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/WhatsApp Image 2025-12-05 at 9.28.30 PM.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/WhatsApp Image 2025-12-05 at 9.35.41 PM.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/474169442_122191152176145736_4965434626988189108_n.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/2024-ARCA-Daytona-preseason-test-Michael-Maples-car-Credit-Devan-Mello-Mello-Yello-Productions-used-with-permission-660x440.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/ARCA-KANSAS.jpg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/maples-1.webp" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/RenderedImage.jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/RenderedImage (1).jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/RenderedImage (2).jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/RenderedImage (3).jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/RenderedImage (4).jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/RenderedImage (5).jpeg" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/Place_the_HMS_racing_logo_on_the_vertical_front_fa-1769032703138.png" alt="Race Gallery" loading="lazy">
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="img/New folder/Place_the_HMS_racing_logo_naturally_on_the_vertica-1769033182772.png" alt="Race Gallery" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="gallery-carousel-btn gallery-next" aria-label="Next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="gallery-carousel-indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="THE TEAM" data-es="EL EQUIPO">THE TEAM</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="team-carousel-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-carousel">
+                    <button class="team-carousel-btn team-prev" aria-label="Previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="team-carousel-container">
+                        <div class="team-carousel-track">
+                            <div class="team-slide">
+                                <img src="img/equipo/Cris Vanscoy Crew chief.png" alt="Chris Vanscoy" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Chris Vanscoy</h4>
+                                    <p class="team-member-role">Crew Chief</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/Diana Maples.png" alt="Diana Maples" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Diana Maples</h4>
+                                    <p class="team-member-role">Communications Director</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/kyle totman crew chief.png" alt="Kyle Totman" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Kyle Totman</h4>
+                                    <p class="team-member-role">Crew Chief</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/jay shaffer car chief.png" alt="Jay Shaffer" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Jay Shaffer</h4>
+                                    <p class="team-member-role">Car Chief</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/Dan Sherrer spotter.png" alt="Dan Sherrer" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Dan Sherrer</h4>
+                                    <p class="team-member-role">Spotter</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/John Szulczewski.png" alt="John Szulczewski" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">John Szulczewski</h4>
+                                    <p class="team-member-role">Team Member</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/colin Flueckiger tire changer.png" alt="Colin Flueckiger" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Colin Flueckiger</h4>
+                                    <p class="team-member-role">Tire Changer</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/nigel Bannister the changer.png" alt="Nigel Bannister" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Nigel Bannister</h4>
+                                    <p class="team-member-role">Tire Changer</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/isaac bennet jackman.png" alt="Isaac Bennet" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Isaac Bennet</h4>
+                                    <p class="team-member-role">Jackman</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/Jake Fairhall Tire specialist.png" alt="Jake Fairhall" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Jake Fairhall</h4>
+                                    <p class="team-member-role">Tire Specialist</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/tyler David tire specialist.png" alt="Tyler David" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Tyler David</h4>
+                                    <p class="team-member-role">Tire Specialist</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/wyatt hunt Fueler.png" alt="Wyatt Hunt" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Wyatt Hunt</h4>
+                                    <p class="team-member-role">Fueler</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/Ronnie Shutt Mechanic fueler tire specialist.png" alt="Ronnie Shutt" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Ronnie Shutt</h4>
+                                    <p class="team-member-role">Mechanic / Fueler / Tire Specialist</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/Mackenzie Wilson Crew Member.png" alt="Mackenzie Wilson" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Mackenzie Wilson</h4>
+                                    <p class="team-member-role">Crew Member</p>
+                                </div>
+                            </div>
+
+                            <div class="team-slide">
+                                <img src="img/equipo/Zane Scaini photographer.png" alt="Zane Scaini" loading="lazy">
+                                <div class="team-member-info">
+                                    <h4 class="team-member-name">Zane Scaini</h4>
+                                    <p class="team-member-role">Photographer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="team-carousel-btn team-next" aria-label="Next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="team-carousel-indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule 2026 Section -->
+    <section id="schedule" class="schedule-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="2026 ARCA MENARDS SERIES SCHEDULE" data-es="CALENDARIO 2026 SERIE ARCA MENARDS">2026 ARCA MENARDS SERIES SCHEDULE</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="schedule-grid">
+                <!-- Race 1 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="race-number">1</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Sat., Feb. 14" data-es="Sáb., Feb. 14">Sat., Feb. 14</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Daytona International Speedway" data-es="Daytona International Speedway">Daytona International Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Daytona Beach, Fla." data-es="Daytona Beach, Fla.">Daytona Beach, Fla.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="Noon ET" data-es="Mediodía ET">Noon ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FOX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 2 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="race-number">2</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Thurs., March 5" data-es="Jue., Marzo 5">Thurs., March 5</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Phoenix Raceway" data-es="Phoenix Raceway">Phoenix Raceway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Avondale, Ariz." data-es="Avondale, Ariz.">Avondale, Ariz.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="6 p.m. ET" data-es="6 p.m. ET">6 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 3 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="race-number">3</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Sat., April 18" data-es="Sáb., Abril 18">Sat., April 18</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Kansas Speedway" data-es="Kansas Speedway">Kansas Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Kansas City, Kan." data-es="Kansas City, Kan.">Kansas City, Kan.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="12:30 p.m. ET" data-es="12:30 p.m. ET">12:30 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 4 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="race-number">4</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Sat., April 25" data-es="Sáb., Abril 25">Sat., April 25</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Talladega Superspeedway" data-es="Talladega Superspeedway">Talladega Superspeedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Talladega, Ala." data-es="Talladega, Ala.">Talladega, Ala.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="12:30 p.m. ET" data-es="12:30 p.m. ET">12:30 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 5 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="race-number">5</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Fri., May 8" data-es="Vie., Mayo 8">Fri., May 8</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Watkins Glen International" data-es="Watkins Glen International">Watkins Glen International</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Watkins Glen, N.Y." data-es="Watkins Glen, N.Y.">Watkins Glen, N.Y.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="1:30 p.m. ET" data-es="1:30 p.m. ET">1:30 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 6 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="race-number">6</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Sat., May 16" data-es="Sáb., Mayo 16">Sat., May 16</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Toledo Speedway" data-es="Toledo Speedway">Toledo Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Toledo, Ohio" data-es="Toledo, Ohio">Toledo, Ohio</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="7 p.m. ET" data-es="7 p.m. ET">7 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 7 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="race-number">7</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Fri., June 5" data-es="Vie., Junio 5">Fri., June 5</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Michigan International Speedway" data-es="Michigan International Speedway">Michigan International Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Brooklyn, Mich." data-es="Brooklyn, Mich.">Brooklyn, Mich.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="5 p.m. ET" data-es="5 p.m. ET">5 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 8 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="race-number">8</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Fri., June 12" data-es="Vie., Junio 12">Fri., June 12</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Pocono Raceway" data-es="Pocono Raceway">Pocono Raceway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Long Pond, Penn." data-es="Long Pond, Penn.">Long Pond, Penn.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="3 p.m. ET" data-es="3 p.m. ET">3 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 9 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="race-number">9</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Sat., June 20" data-es="Sáb., Junio 20">Sat., June 20</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Berlin Raceway" data-es="Berlin Raceway">Berlin Raceway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Marne, Mich." data-es="Marne, Mich.">Marne, Mich.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="7 p.m. ET" data-es="7 p.m. ET">7 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 10 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="race-number">10</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Sat., June 27" data-es="Sáb., Junio 27">Sat., June 27</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Elko Speedway" data-es="Elko Speedway">Elko Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Elko, Minn." data-es="Elko, Minn.">Elko, Minn.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="9 p.m. ET" data-es="9 p.m. ET">9 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 11 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="race-number">11</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Fri., July 3" data-es="Vie., Julio 3">Fri., July 3</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Chicagoland Speedway" data-es="Chicagoland Speedway">Chicagoland Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Joliet, Ill." data-es="Joliet, Ill.">Joliet, Ill.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="8 p.m. ET" data-es="8 p.m. ET">8 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 12 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="race-number">12</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Sat., July 11" data-es="Sáb., Julio 11">Sat., July 11</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Lime Rock Park" data-es="Lime Rock Park">Lime Rock Park</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Lime Rock, Conn." data-es="Lime Rock, Conn.">Lime Rock, Conn.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="4 p.m. ET" data-es="4 p.m. ET">4 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 13 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="race-number">13</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Fri., July 24" data-es="Vie., Julio 24">Fri., July 24</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Lucas Oil Indianapolis Raceway Park" data-es="Lucas Oil Indianapolis Raceway Park">Lucas Oil Indianapolis Raceway Park</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Brownsburg, Ind." data-es="Brownsburg, Ind.">Brownsburg, Ind.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="5 p.m. ET" data-es="5 p.m. ET">5 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 14 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="race-number">14</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Fri., Aug. 7" data-es="Vie., Ago. 7">Fri., Aug. 7</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Iowa Speedway" data-es="Iowa Speedway">Iowa Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Newton, Iowa" data-es="Newton, Iowa">Newton, Iowa</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="7 p.m. ET" data-es="7 p.m. ET">7 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 15 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="race-number">15</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Sun., Aug. 23" data-es="Dom., Ago. 23">Sun., Aug. 23</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Illinois State Fairgrounds" data-es="Illinois State Fairgrounds">Illinois State Fairgrounds</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Springfield, Ill." data-es="Springfield, Ill.">Springfield, Ill.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="2 p.m. ET" data-es="2 p.m. ET">2 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 16 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="race-number">16</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Fri., Aug. 28" data-es="Vie., Ago. 28">Fri., Aug. 28</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Madison International Speedway" data-es="Madison International Speedway">Madison International Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Oregon, Wis." data-es="Oregon, Wis.">Oregon, Wis.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="9 p.m. ET" data-es="9 p.m. ET">9 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 17 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="race-number">17</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Sun., Sept. 6" data-es="Dom., Sept. 6">Sun., Sept. 6</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="DuQuoin State Fairgrounds" data-es="DuQuoin State Fairgrounds">DuQuoin State Fairgrounds</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="DuQuoin, Ill." data-es="DuQuoin, Ill.">DuQuoin, Ill.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="8:30 p.m. ET" data-es="8:30 p.m. ET">8:30 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 18 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="race-number">18</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Sat., Sept. 12" data-es="Sáb., Sept. 12">Sat., Sept. 12</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Salem Speedway" data-es="Salem Speedway">Salem Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Salem, Ind." data-es="Salem, Ind.">Salem, Ind.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="6 p.m. ET" data-es="6 p.m. ET">6 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 19 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="race-number">19</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Thurs., Sept. 17" data-es="Jue., Sept. 17">Thurs., Sept. 17</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Bristol Motor Speedway" data-es="Bristol Motor Speedway">Bristol Motor Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Bristol, Tenn." data-es="Bristol, Tenn.">Bristol, Tenn.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="5:30 p.m. ET" data-es="5:30 p.m. ET">5:30 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Race 20 -->
+                <div class="race-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="race-number">20</div>
+                    <div class="race-date">
+                        <span class="date-day" data-en="Thurs., Sept. 25" data-es="Jue., Sept. 25">Thurs., Sept. 25</span>
+                    </div>
+                    <div class="race-track">
+                        <h3 data-en="Kansas Speedway" data-es="Kansas Speedway">Kansas Speedway</h3>
+                        <p class="race-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Kansas City, Kan." data-es="Kansas City, Kan.">Kansas City, Kan.</span>
+                        </p>
+                    </div>
+                    <div class="race-info">
+                        <div class="race-time">
+                            <i class="far fa-clock"></i>
+                            <span data-en="8 p.m. ET" data-es="8 p.m. ET">8 p.m. ET</span>
+                        </div>
+                        <div class="race-tv">
+                            <i class="fas fa-tv"></i>
+                            <span>FS1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule-footer" data-aos="fade-up" data-aos-delay="200">
+                <p data-en="Follow Maples Motorsports throughout the 2026 ARCA Menards Series season" data-es="Sigue a Maples Motorsports durante toda la temporada 2026 de la Serie ARCA Menards">
+                    Follow Maples Motorsports throughout the 2026 ARCA Menards Series season
+                </p>
+                <a href="https://www.arcaracing.com" target="_blank" class="schedule-link">
+                    <span data-en="Visit ARCA Racing Official Site" data-es="Visita el Sitio Oficial de ARCA Racing">Visit ARCA Racing Official Site</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="Hero Card Request" data-es="Solicitud de Hero Card">Hero Card Request</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle" style="color: var(--text-gray); margin-top: 20px; font-size: 18px; max-width: 700px; margin-left: auto; margin-right: auto;">Please fill out the information below and we will mail you an autographed Hero Card! Thank you for all your support of Maples Motorsports.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 data-en="Location" data-es="Ubicación">Location</h3>
+                            <p>702 Performance Rd. Mooresville, NC 28115</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 data-en="Email" data-es="Email">Email</h3>
+                            <p>contact@maplesmotorsports.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 data-en="Website" data-es="Sitio Web">Website</h3>
+                            <p>maplemotorsports.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <a href="https://www.instagram.com/maplesmotorsports/" target="_blank" aria-label="Instagram" class="social-instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61554372101336" target="_blank" aria-label="Facebook" class="social-facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name" data-en="Your Name" data-es="Tu Nombre">Your Name</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email" data-en="Your Email" data-es="Tu Email">Your Email</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" required>
+                        <label for="subject" data-en="Subject" data-es="Asunto">Subject</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required></textarea>
+                        <label for="message" data-en="Your Message" data-es="Tu Mensaje">Your Message</label>
+                    </div>
+
+                    <h4 style="color: var(--text-white); margin: 20px 0 15px; font-size: 16px;">Address <span style="color: var(--primary-red);">*</span></h4>
+
+                    <div class="form-group">
+                        <select id="country" required style="background: var(--card-bg); color: white; padding: 15px; border: 2px solid rgba(255,255,255,0.1); border-radius: 5px; width: 100%; font-size: 16px; font-family: var(--font-primary);">
+                            <option value="">Select Country</option>
+                            <option value="US" selected>United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="MX">Mexico</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="DE">Germany</option>
+                            <option value="FR">France</option>
+                            <option value="ES">Spain</option>
+                            <option value="IT">Italy</option>
+                            <option value="AU">Australia</option>
+                            <option value="JP">Japan</option>
+                            <option value="BR">Brazil</option>
+                            <option value="AR">Argentina</option>
+                            <option value="CO">Colombia</option>
+                            <option value="CL">Chile</option>
+                            <option value="PE">Peru</option>
+                            <option value="NL">Netherlands</option>
+                            <option value="BE">Belgium</option>
+                            <option value="AT">Austria</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="SE">Sweden</option>
+                            <option value="NO">Norway</option>
+                            <option value="DK">Denmark</option>
+                            <option value="FI">Finland</option>
+                            <option value="PL">Poland</option>
+                            <option value="PT">Portugal</option>
+                            <option value="IE">Ireland</option>
+                            <option value="NZ">New Zealand</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="address1" required>
+                        <label for="address1">Address Line 1 <span style="color: var(--primary-red);">*</span></label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="address2">
+                        <label for="address2">Address Line 2</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="city" required>
+                        <label for="city">City <span style="color: var(--primary-red);">*</span></label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="state" required>
+                        <label for="state">State <span style="color: var(--primary-red);">*</span></label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="zipcode" required>
+                        <label for="zipcode">ZIP Code <span style="color: var(--primary-red);">*</span></label>
+                    </div>
+
+                    <button type="submit" class="submit-btn" data-en="Send Request" data-es="Enviar Solicitud">Send Request</button>
+                    
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <p data-en="Message sent successfully!" data-es="¡Mensaje enviado exitosamente!">Message sent successfully!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="img/logo/bglogo.png" alt="Maples Motorsports Logo" class="footer-logo-img">
+                    </div>
+                    <p data-en="Building a competitive ARCA racing team from the ground up." data-es="Construyendo un equipo competitivo de ARCA desde cero.">
+                        Building a competitive ARCA racing team from the ground up.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h4>
+                    <a href="#home" data-en="Home" data-es="Inicio">Home</a>
+                    <a href="#about" data-en="About" data-es="Acerca">About</a>
+                    <a href="#stats" data-en="Stats" data-es="Estadísticas">Stats</a>
+                    <a href="#gallery" data-en="Gallery" data-es="Galería">Gallery</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-en="Team" data-es="Equipo">Team</h4>
+                    <a href="#team" data-en="Our Team" data-es="Nuestro Equipo">Our Team</a>
+                    <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+                    <a href="https://maplemotorsports.org" target="_blank" data-en="Official Site" data-es="Sitio Oficial">Official Site</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h4 data-en="Follow Us" data-es="Síguenos">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/maplesmotorsports/" target="_blank" aria-label="Instagram" class="social-instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61554372101336" target="_blank" aria-label="Facebook" class="social-facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Maples Motorsports. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
